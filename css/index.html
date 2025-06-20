@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vegefoods</title>
+
+
+ <!-- main  css style of this page  -->
+  <link rel="stylesheet" href="css/style.css">
+<!-- cdn for animation on scroll AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <!-- cdn of font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo">
+      <i class="fas fa-leaf"></i> VEGEFOODS
+    </div>
+
+    <div class="search-box">
+      <form action="#shop" method="get">
+        <input list="product-options" name="search" placeholder="Search products..." />
+        <datalist id="product-options">
+          <option value="Fruits">
+          <option value="Vegetables">
+          <option value="Juices">
+          <option value="Dried Fruits">
+          <option value="Organic Foods">
+          <option value="Fresh Produce">
+          <option value="Healthy Snacks">
+          <option value="Grocery Items">
+          <option value="Local Produce">
+          <option value="Seasonal Specials">
+        </datalist>
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+
+    <div class="menu-toggle" onclick="document.querySelector('.menu-bar').classList.toggle('active')">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="menu-bar">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+
+      <div class="custom-dropdown">
+        <button class="dropdown-toggle"><i class="fas fa-store"></i> Shop</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#shop">Shop</a>
+          <a class="dropdown-item" href="#">Wishlist</a>
+          <a class="dropdown-item" href="#">Single Product</a>
+          <a class="dropdown-item" href="#">Cart</a>
+          <a class="dropdown-item" href="#">Checkout</a>
+        </div>
+      </div>
+
+      <a href="#" id="cart"><i class="fa-solid fa-cart-arrow-down"></i> [0]</a>
+      <a href="#blogs"><i class="fas fa-blog"></i> Blog</a>
+
+      <div class="custom-dropdown">
+        <button class="dropdown-toggle login"><i class="fas fa-user"></i> Login</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#login">Register</a>
+          <a class="dropdown-item" href="#login">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar ends here -->
+
+  <!-- hero section starts here -->
+<section id="home-section" class="hero">
+  <div class="home-slider">
+    <div class="slider-item active" style="background-image: url('images/bg_1.jpg');">
+      <div class="overlay"></div>
+      <div class="slider-content">
+        <h1>We serve Fresh Vegetables &amp; Fruits</h1>
+        <h2 class="subheading">We deliver organic vegetables &amp; fruits</h2>
+        <p><a href="#" class="btn">View Details</a></p>
+      </div>
+    </div>
+    <div class="slider-item" style="background-image: url('images/bg_2.jpg');">
+      <div class="overlay"></div>
+      <div class="slider-content">
+        <h1>100% Fresh &amp; Organic Foods</h1>
+        <h2 class="subheading">We deliver organic vegetables &amp; fruits</h2>
+        <p><a href="#" class="btn">View Details</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- hero section ends here -->
+
+  <!-- about section start here -->
+<section class="about" id="about">
+  <div class="about-heading" data-aos="fade-up">
+    <h1>We Provide Services Like</h1>
+  </div>
+  <div class="features">
+    <div class="feature" data-aos="fade-up" data-aos-delay="100">
+      <div class="icon-wrapper" style="background-color: #c7b6a7;">
+        <i class="fa-solid fa-truck-fast"></i>
+      </div>
+      <h3>FREE SHIPPING</h3>
+      <p>ON ORDER OVER $100</p>
+    </div>
+
+    <div class="feature" data-aos="fade-up" data-aos-delay="200">
+      <div class="icon-wrapper" style="background-color: #e5cd92;">
+        <i class="fa-solid fa-seedling"></i>
+      </div>
+      <h3>ALWAYS FRESH</h3>
+      <p>PRODUCT WELL PACKAGE</p>
+    </div>
+
+    <div class="feature" data-aos="fade-up" data-aos-delay="300">
+      <div class="icon-wrapper" style="background-color: #a9d5e8;">
+        <i class="fas fa-medal"></i>
+      </div>
+      <h3>SUPERIOR QUALITY</h3>
+      <p>QUALITY PRODUCTS</p>
+    </div>
+
+    <div class="feature" data-aos="fade-up" data-aos-delay="400">
+      <div class="icon-wrapper" style="background-color: #dcd488;">
+        <i class="fas fa-headset"></i>
+      </div>
+      <h3>SUPPORT</h3>
+      <p>24/7 SUPPORT</p>
+    </div>
+  </div>
+</section>
+
+   <!-- about section ends here -->
+<section class="category-section" id="categories" data-aos="fade-up">
+  <div class="container">
+    <div class="left-right-wrapper">
+      <!-- Left Section -->
+      <div class="left-column" data-aos="fade-right">
+        <div class="category-box small" style="background-image: url('images/category-1.jpg');">
+          <div id="text"><h2><a href="#">Fruits</a></h2></div>
+        </div>
+        <div class="category-box small" style="background-image: url('images/category-2.jpg');">
+          <div id="text"><h2><a href="#">Vegetables</a></h2></div>
+        </div>
+      </div>
+
+      <!-- Center Section -->
+      <div class="center-column" data-aos="zoom-in">
+        <div class="category-box large" style="background-image: url('images/category.jpg');">
+          <div class="center" id="text">
+            <h2>Vegetables</h2>
+            <p>Protect the health of every home</p>
+            <p><a href="#" class="btn">Shop now</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="right-column" data-aos="fade-left">
+        <div class="category-box small" style="background-image: url('images/category-3.jpg');">
+          <div id="text"><h2><a href="#">Juices</a></h2></div>
+        </div>
+        <div class="category-box small" style="background-image: url('images/category-4.jpg');">
+          <div id="text"><h2><a href="#">Dried</a></h2></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- start of shop section  -->
+
+<section class="shop" id="shop" data-aos="fade-up">
+     <div class="section-header">
+      <div class="header-content">
+          <span class="subheading">Featured Products</span>
+          <h2 class="main-heading">Our Products</h2>
+          <p class="description">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+       </div>
+     </div>
+      <div class="shop-container">
+    		<div class="row">
+    			 <div class="col-md-6 col-lg-3 ftco-animate" data-aos="zoom-in" data-aos-delay="100">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-1.jpg" alt="Colorlib Template">
+    						<span class="status">30%</span>
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3 text-center">
+    						<h3><a href="#">Bell Pepper</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span class="mr-2 price-dc " style="text-decoration: line-through; ">$120.00</span><span class="price-sale">$80.00</span></p>
+		    					</div>
+	    					</div>
+	    					<div class="bottom-area d-flex px-3">
+	    						<div class="m-auto d-flex">
+	    							<a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+	    								<span><i class="fas fa-bars"></i></span>
+	    							</a>
+	    							<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+	    								<span><i class="fas fa-shopping-cart"></i></span>
+	    							</a>
+	    							<a href="#" class="heart d-flex justify-content-center align-items-center ">
+	    								<span><i class="fas fa-heart"></i></span>
+	    							</a>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			  <div class="col-md-6 col-lg-3 ftco-animate" data-aos="zoom-in" data-aos-delay="200">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-2.jpg" alt="Colorlib Template">
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3 text-center">
+    						<h3><a href="#">Strawberry</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span>$120.00</span></p>
+		    					</div>
+	    					</div>
+    						<div class="bottom-area d-flex px-3">
+	    						<div class="m-auto d-flex">
+	    							<a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+	    								<span><i class="fas fa-bars"></i></span>
+	    							</a>
+	    							<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+	    								<span><i class="fas fa-shopping-cart"></i></span>
+	    							</a>
+	    							<a href="#" class="heart d-flex justify-content-center align-items-center ">
+	    							<span><i class="fas fa-heart"></i></span>
+	    							</a>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			  <div class="col-md-6 col-lg-3 ftco-animate" data-aos="zoom-in" data-aos-delay="300">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-3.jpg" alt="Colorlib Template">
+	    					<div class="overlay"></div>
+	    				</a>
+    					<div class="text py-3 pb-4 px-3 text-center">
+    						<h3><a href="#">Green Beans</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span>$120.00</span></p>
+		    					</div>
+	    					</div>
+    						<div class="bottom-area d-flex px-3">
+	    						<div class="m-auto d-flex">
+	    							<a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+	    								<span><i class="fas fa-bars"></i></span>
+	    							</a>
+	    							<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+	    							<span><i class="fas fa-shopping-cart"></i></span>
+	    							</a>
+	    							<a href="#" class="heart d-flex justify-content-center align-items-center ">
+	    								<span><i class="fas fa-heart"></i></span>
+	    							</a>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-3 ftco-animate" data-aos="zoom-in" data-aos-delay="400">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-4.jpg" alt="Colorlib Template">
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3 text-center">
+    						<h3><a href="#">Purple Cabbage</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span>$120.00</span></p>
+		    					</div>
+	    					</div>
+    						<div class="bottom-area d-flex px-3">
+	    						<div class="m-auto d-flex">
+	    							<a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+	    								<span><i class="fas fa-bars"></i></span>
+	    							</a>
+	    							<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+	    								<span><i class="fas fa-shopping-cart"></i></span>
+	    							</a>
+	    							<a href="#" class="heart d-flex justify-content-center align-items-center ">
+	    								<span><i class="fas fa-heart"></i></span>
+	    							</a>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+
+
+    		 <div class="col-md-6 col-lg-3 ftco-animate" data-aos="fade-up" data-aos-delay="100">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-5.jpg" alt="Colorlib Template">
+    						<span class="status">30%</span>
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3 text-center">
+    						<h3><a href="#">Tomatoe</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span class="mr-2 price-dc " style="text-decoration: line-through;">$120.00</span><span class="price-sale">$80.00</span></p>
+		    					</div>
+	    					</div>
+	    					<div class="bottom-area d-flex px-3">
+	    						<div class="m-auto d-flex">
+	    							<a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+	    							<span><i class="fas fa-bars"></i></span>
+	    							</a>
+	    							<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+	    								<span><i class="fas fa-shopping-cart"></i></span>
+	    							</a>
+	    							<a href="#" class="heart d-flex justify-content-center align-items-center ">
+	    								<span><i class="fas fa-heart"></i></span>
+	    							</a>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-3 ftco-animate" data-aos="fade-up" data-aos-delay="200">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-6.jpg" alt="Colorlib Template">
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3 text-center">
+    						<h3><a href="#">Brocolli</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span>$120.00</span></p>
+		    					</div>
+	    					</div>
+    						<div class="bottom-area d-flex px-3">
+	    						<div class="m-auto d-flex">
+	    							<a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+	    								<span><i class="fas fa-bars"></i></span>
+	    							</a>
+	    							<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+	    								<span><i class="fas fa-shopping-cart"></i></span>
+	    							</a>
+	    							<a href="#" class="heart d-flex justify-content-center align-items-center ">
+	    								<span><i class="fas fa-heart"></i></span>
+	    							</a>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			 <div class="col-md-6 col-lg-3 ftco-animate" data-aos="fade-up" data-aos-delay="300">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-7.jpg" alt="Colorlib Template">
+	    					<div class="overlay"></div>
+	    				</a>
+    					<div class="text py-3 pb-4 px-3 text-center">
+    						<h3><a href="#">Carrots</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span>$120.00</span></p>
+		    					</div>
+	    					</div>
+    						<div class="bottom-area d-flex px-3">
+	    						<div class="m-auto d-flex">
+	    							<a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+	    							<span><i class="fas fa-bars"></i></span>
+	    							</a>
+	    							<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+	    								<span><i class="fas fa-shopping-cart"></i></span>
+	    							</a>
+	    							<a href="#" class="heart d-flex justify-content-center align-items-center ">
+	    								<span><i class="fas fa-heart"></i></span>
+	    							</a>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-md-6 col-lg-3 ftco-animate" data-aos="fade-up" data-aos-delay="400">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-8.jpg" alt="Colorlib Template">
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 pb-4 px-3 text-center">
+    						<h3><a href="#">Fruit Juice</a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span>$120.00</span></p>
+		    					</div>
+	    					</div>
+    						<div class="bottom-area d-flex px-3">
+	    						<div class="m-auto d-flex">
+	    							<a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+	    							<span><i class="fas fa-bars"></i></span>
+	    							</a>
+	    							<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+	    								<span><i class="fas fa-shopping-cart"></i></span>
+	    							</a>
+	    							<a href="#" class="heart d-flex justify-content-center align-items-center ">
+	    								<span><i class="fas fa-heart"></i></span>
+	    							</a>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   <!-- shop section  ends here  -->
+
+ <!-- blog section start here -->
+<section class="blogs" id="blogs">
+	<div class="blog-container">
+	  <div class="blog">
+	
+	  </div>
+	  <div class="blog">
+          <div class="blog-text">
+	          <div class="sub-heading"><h2>Best Price For You</h2></div>
+	          <div class="sub-heading"> <h3>Deal of the day</h3></div>
+	          <div class="sub-heading"><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p></div>
+	          <div class="sub-heading"><a href="#">Spinach</a></div>
+	          <div class="sub-heading"> <h6 id="p">$10 now $5 only</h6></div>
+	      </div>
+		  <div class="time">
+
+		  </div>
+	  </div>
+    </div>
+	<div class="reviews">
+		<div><h4>Testimony</h4></div>
+		<div><h1>Our satisfied customer says</h1></div>
+		<div><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p></div></div>
+	</div>
+ <div class="testimonial-slider">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="profile-container">
+            <img src="https://randomuser.me/api/portraits/men/10.jpg" class="profile-img">
+            <div class="quote-icon">❝</div>
+          </div>
+          <p class="quote-text">The service was excellent. Highly professional and supportive.</p>
+          <div class="name">John Doe</div>
+          <div class="title">Software Engineer</div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="profile-container">
+            <img src="https://randomuser.me/api/portraits/women/20.jpg" class="profile-img">
+            <div class="quote-icon">❝</div>
+          </div>
+          <p class="quote-text">Amazing experience. I would recommend them to everyone.</p>
+          <div class="name">Jane Smith</div>
+          <div class="title">UI Designer</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="profile-container">
+            <img src="https://randomuser.me/api/portraits/men/30.jpg" class="profile-img">
+            <div class="quote-icon">❝</div>
+          </div>
+          <p class="quote-text">They helped us achieve our business goals with ease.</p>
+          <div class="name">David Clark</div>
+          <div class="title">Project Manager</div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="profile-container">
+            <img src="https://randomuser.me/api/portraits/women/40.jpg" class="profile-img">
+            <div class="quote-icon">❝</div>
+          </div>
+          <p class="quote-text">Truly a wonderful team with great professionalism.</p>
+          <div class="name">Sarah Lee</div>
+          <div class="title">Marketing Lead</div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="profile-container">
+            <img src="https://randomuser.me/api/portraits/men/50.jpg" class="profile-img">
+            <div class="quote-icon">❝</div>
+          </div>
+          <p class="quote-text">Reliable and efficient. They delivered more than expected.</p>
+          <div class="name">Michael Brown</div>
+          <div class="title">CTO</div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <div class="profile-container">
+            <img src="https://randomuser.me/api/portraits/women/60.jpg" class="profile-img">
+            <div class="quote-icon">❝</div>
+          </div>
+          <p class="quote-text">Very cooperative and timely delivery of results.</p>
+          <div class="name">Lisa Adams</div>
+          <div class="title">Business Analyst</div>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+  <!-- blog section ends here -->
+
+  <!-- contact us section -->
+ <section class="login-container" id="login" data-aos="fade-up">
+	<div class="register-wrapper">
+    <div class="form-card">
+      <h2 class="form-title">Register</h2>
+      <p class="form-subtitle">Register your account</p>
+      <form class="user-form">
+        <input type="text" placeholder="Name" required class="input-field" />
+        <input type="email" placeholder="E-mail" required class="input-field" />
+        <input type="password" placeholder="Password" required class="input-field" />
+        <label class="check-container">
+          <input type="checkbox" required />
+          <span>I read & agree to Terms & Conditions</span>
+        </label>
+        <button type="submit" class="submit-btn">Create an Account</button>
+        <p class="signin-link">Already have an account? <a href="#">Sign in</a></p>
+      </form>
+    </div>
+    <div class="side-panel">
+      <h3 class="welcome-title">Glad to see you</h3>
+      <p class="welcome-msg">Lorem Ipsum available, but the majority have suffered alteration in some form,</p>
+    </div>
+  </div>
+  </section>
+ <!-- contact section ends here -->
+
+<section class="marquee-section" style="margin: 40px 0; overflow: hidden;">
+  <div class="marquee-wrapper" style="width: 100%; overflow: hidden; position: relative;">
+    <div class="marquee-content" style="display: flex; align-items: center; animation: marqueeAnim 25s linear infinite;">
+      <img src="images/partner-1.png" alt="Partner 1" style="height:50px; margin:0 30px;">
+      <img src="images/partner-2.png" alt="Partner 2" style="height:50px; margin:0 30px;">
+      <img src="images/partner-3.png" alt="Partner 3" style="height:50px; margin:0 30px;">
+      <img src="images/partner-4.png" alt="Partner 4" style="height:50px; margin:0 30px;">
+      <img src="images/partner-5.png" alt="Partner 5" style="height:50px; margin:0 30px;">
+      <img src="images/partner-1.png" alt="Partner 1" style="height:50px; margin:0 30px;">
+      <img src="images/partner-2.png" alt="Partner 2" style="height:50px; margin:0 30px;">
+      <img src="images/partner-3.png" alt="Partner 3" style="height:50px; margin:0 30px;">
+      <img src="images/partner-4.png" alt="Partner 4" style="height:50px; margin:0 30px;">
+      <img src="images/partner-5.png" alt="Partner 5" style="height:50px; margin:0 30px;">
+      <!-- Duplicate for seamless infinite effect -->
+      <img src="images/partner-1.png" alt="Partner 1" style="height:50px; margin:0 30px;">
+      <img src="images/partner-2.png" alt="Partner 2" style="height:50px; margin:0 30px;">
+      <img src="images/partner-3.png" alt="Partner 3" style="height:50px; margin:0 30px;">
+      <img src="images/partner-4.png" alt="Partner 4" style="height:50px; margin:0 30px;">
+      <img src="images/partner-5.png" alt="Partner 5" style="height:50px; margin:0 30px;">
+    </div>
+  </div>
+</section>
+
+  <!-- Footer Start -->
+  <footer class="custom-footer">
+    <div class="footer-container">
+      <div class="footer-row">
+        <div class="footer-column" style="text-align:center;">
+          <a href="#" class="scroll-up-btn">
+            <i class="fa-solid fa-chevron-up fa-lg"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-row">
+        <div class="footer-column">
+          <div class="footer-section">
+            <h3>Vegefoods</h3>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+            <ul class="social-icons">
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-section">
+            <h3>Menu</h3>
+            <ul>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Journal</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-section">
+            <h3>Help</h3>
+            <ul>
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Returns & Exchange</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <div class="footer-section">
+            <h3>Have a Questions?</h3>
+            <ul>
+              <li><i class="fas fa-map-marker-alt"></i> 203 Fake St. Mountain View, California, USA</li>
+              <li><i class="fas fa-phone-alt"></i> <a href="tel:+2392399210">+2 392 3929 210</a></li>
+              <li><i class="fas fa-envelope"></i> <a href="mailto:info@yourdomain.com">info@yourdomain.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-text">
+        <p>&copy; 2025 Vegefoods. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+
+    
+    const toggleBtn = document.getElementById('menu-toggle');
+    const menuBar = document.getElementById('menu-bar');
+
+    toggleBtn.addEventListener('click', () => {
+      menuBar.classList.toggle('active');
+    });
+
+  </script>
+
+
+  <script src="js/script.js">
+
+  </script>
+  <!-- cdn od aos -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"> </script> 
+  <script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+  </script>
+  <!-- cdn for bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>

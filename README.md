@@ -31,7 +31,7 @@ Real-world layout experience from internship projects
 🎯 Objective:
 To build a real-world style static eCommerce site for fruits and vegetables, applying frontend development skills gained through academic learning and internship training.
 
-🔗 Live Preview | Source Code
+🔗 Live Preview 
 ![Screenshot 2025-06-21 122318](https://github.com/user-attachments/assets/5c2bf3e1-611c-4e46-a08f-f5801e649808)
 ![Screenshot 2025-06-21 122328](https://github.com/user-attachments/assets/65cd9aae-33de-453f-a93d-a9aa781b7a17)
 ![Screenshot 2025-06-21 122340](https://github.com/user-attachments/assets/0d9e46aa-3ecf-4a7d-bc32-85cb3310ad4c)

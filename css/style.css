@@ -1,3 +1,8 @@
+/* design taken from the colorlib website vegefoods template made by shubham kumar all the code 
+are written by shubham and without bootstrap and jquerry only raw css  */
+
+
+
 *{
   margin: 0px;
   padding: 0px;
@@ -164,56 +169,94 @@
       margin-left: auto;
     }
 
-    @media screen and (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+    /* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .navbar {
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-      .logo {
-        width: 100%;
-        text-align: left;
-      }
+  .logo {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
 
-      .search-box {
-        width: 100%;
-        justify-content: flex-start;
-        margin: 10px 0;
-      }
+  .search-box {
+    width: 100%;
+    justify-content: center; /* center align on tablet */
+    margin: 10px 0;
+  }
 
-      .search-box form {
-        width: 100%;
-      }
+  .search-box form {
+    width: 100%;
+    max-width: 100%; /* full width on tablet */
+  }
 
-      .menu-toggle {
-        display: block;
-        color: #333;
-      }
+  .search-box input {
+    width: 100%; /* input stretches */
+    border-radius: 25px 0 0 25px;
+  }
 
-      .menu-bar {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        display: none;
-        gap: 10px;
-      }
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+    margin-bottom: 10px;
+  }
 
-      .menu-bar.active {
-        display: flex;
-      }
+  .menu-bar {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    display: none;
+  }
 
-      .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        background: none;
-        padding: 0;
-      }
+  .menu-bar.active {
+    display: flex;
+  }
 
-      .dropdown-item {
-        padding-left: 20px;
-      }
-    }
+  .menu-bar a,
+  .dropdown-toggle {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .custom-dropdown {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background: #f9f9f9;
+    box-shadow: none;
+    padding: 0;
+    margin-left: 10px;
+    display: none;
+    flex-direction: column;
+  }
+
+  .custom-dropdown:hover .dropdown-menu,
+  .custom-dropdown:focus-within .dropdown-menu {
+    display: flex;
+  }
+
+  .dropdown-item {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .login {
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+  }
+}
 /* Navbar ends here */
+
+
 /* hero section starts here */
 /* Hero Section */
 .hero {

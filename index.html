@@ -1,3 +1,6 @@
+<!-- design taken from the colorlib website vegefoods template made by shubham kumar all the code 
+are written by shubham and without bootstrap and jquerry only raw css -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +29,7 @@
 
     <div class="search-box">
       <form action="#shop" method="get">
-        <input list="product-options" name="search" placeholder="Search products..." />
+        <input list="product-options" name="search" placeholder="Search products..." class="search" />
         <datalist id="product-options">
           <option value="Fruits">
           <option value="Vegetables">
@@ -39,7 +42,7 @@
           <option value="Local Produce">
           <option value="Seasonal Specials">
         </datalist>
-        <button type="submit"><i class="fas fa-search"></i></button>
+        <button type="submit" class="search"><i class="fas fa-search"></i></button>
       </form>
     </div>
 
@@ -679,6 +682,14 @@
     toggleBtn.addEventListener('click', () => {
       menuBar.classList.toggle('active');
     });
+
+
+  
+  document.querySelector(".menu-toggle").addEventListener("click", function () {
+    document.querySelector(".menu-bar").classList.toggle("active");
+  });
+
+
 
   </script>
 
